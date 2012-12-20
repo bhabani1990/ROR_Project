@@ -1,28 +1,77 @@
 SampleApp::Application.routes.draw do
-  get "static_pages/bhabani"
+ 
 
-  get "static_pages/index"
 
-  get "static_pages/home"
 
-  get "static_pages/help"
 
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
+ get "users/new"
 
-  # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
+ 
+
+ get "static_pages/bhabani"
+
+  
+
+get "static_pages/index"
+
+  
+
+
+get "static_pages/home"
+
+ 
+
+
+ get "static_pages/help"
+
+ 
+
+
+match '/signup',  to: 'users#home'
+
+
+  match '/help',    to: 'static_pages#help'
+  match '/about',   to: 'static_pages#about'
+  match '/contact', to: 'static_pages#contact'
+
+
+
+ # The priority is based upon order of creation:
+ 
+
+
+
+ # first created -> highest priority.
+
+ 
+
+
+ # Sample of regular route:
+ 
+
+
+ #   match 'products/:id' => 'catalog#view'
+  
+
+# Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
+ 
+
+ #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+ 
+
+ # Sample resource route (maps HTTP verbs to controller actions automatically):
+ 
+
+ #   resources :products
 
   # Sample resource route with options:
-  #   resources :products do
+ 
+
+ #   resources :products do
   #     member do
   #       get 'short'
   #       post 'toggle'
